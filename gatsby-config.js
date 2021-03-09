@@ -1,16 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: "beaver_builder",
+    title: "Epic Design Labs",
+    titleTemplate: "%s | Epic Design Labs",
+    description:
+      "High quality design development and marketing for ecommerce stores. We help businesses increase conversions and get more traffic. We can help you grow too.",
+    url: "https://epicdesignlabs.com", // No trailing slash allowed!
+    //image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@occlumency",
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
         url: "https://epicdesignlabs.com/graphql",
+        perPage: 10,
       },
     },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -29,5 +35,21 @@ module.exports = {
       },
       __key: "images",
     },
+
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["400", "700"],
+            },
+            { family: "Open Sans" },
+          ],
+        },
+      },
+    }
+    
   ],
 };
