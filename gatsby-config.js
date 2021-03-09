@@ -5,6 +5,7 @@ module.exports = {
     description:
       "High quality design development and marketing for ecommerce stores. We help businesses increase conversions and get more traffic. We can help you grow too.",
     url: "https://epicdesignlabs.com", // No trailing slash allowed!
+    siteUrl: "https://epicdesignlabs.com",
     //image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@occlumency",
   },
